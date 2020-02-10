@@ -1,6 +1,6 @@
 "显示行号'
 set nu
-set number
+"set number
 
 "突出当前行
 set cursorline
@@ -24,8 +24,8 @@ filetype on
 " 打开语法高亮显示 "
 syntax on
 
-"让vimrc配置变更立即生效'
-autocmd BufWritePost $MYVIMRC source $MYVIMRC
+"让vimrc配置变更立即生效,OK
+"autocmd BufWritePost $MYVIMRC source $MYVIMRC
 
 " .git、.svn、.root等文件用于查看文件的根路径，否则不生成tag
 " 自动跳转 Ctrl + W + ] 新窗口查看函数定义 Ctrl -W } 窗口预览光标下符号定义
@@ -60,6 +60,10 @@ set noshowmode
 "Hide the default mode text (e.g. -- INSERT -- below the statusline)'
 set t_Co=256
 
+"vim配色方案
+"colorscheme gruvbox
+"set background=dark
+"set t_Co=256
 
 call plug#begin('~/.vim/plugged')
 "代码自动补全插件
@@ -70,4 +74,10 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'https://github.com/scrooloose/nerdtree'
 "模糊搜素插件ctrlp
 Plug 'ctrlpvim/ctrlp.vim'
+"配色方案
+Plug 'morhetz/gruvbox'
 call plug#end()
+
+colorscheme gruvbox
+set background=dark
+
