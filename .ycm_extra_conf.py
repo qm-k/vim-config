@@ -40,12 +40,26 @@ flags = [
 # For a C project, you would set this to 'c' instead of 'c++'.
 '-x',
 'c++',
+# 添加了 ‘echo | clang -v -E -x c++ - ’ 输出的头文件路径，以支持C++头文件，函数支持暂未测试
+'-I',
+'/usr/bin/../lib/gcc/x86_64-linux-gnu/7.4.0/../../../../include/c++/7.4.0',
+'-I',
+'/usr/bin/../lib/gcc/x86_64-linux-gnu/7.4.0/../../../../include/x86_64-linux-gnu/c++/7.4.0',
+'-I',
+'/usr/bin/../lib/gcc/x86_64-linux-gnu/7.4.0/../../../../include/c++/7.4.0/backward',
+'-I',
+'/usr/include/clang/6.0.0/include',
+'-I',
+'/usr/include/x86_64-linux-gnu',
+
 '-isystem',
 '/usr/include',
 '-isystem',
 '/usr/local/include',
 '-isystem',
 '/opt/ros/melodic/include',
+'-isystem',
+
 '-isystem',
 '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1',
 '-isystem',
