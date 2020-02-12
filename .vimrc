@@ -27,6 +27,9 @@ syntax on
 "让vimrc配置变更立即生效,OK
 "autocmd BufWritePost $MYVIMRC source $MYVIMRC
 
+" 解决插入模式下delete/backspce键失效问题
+set backspace=2
+
 " .git、.svn、.root等文件用于查看文件的根路径，否则不生成tag
 " 自动跳转 Ctrl + W + ] 新窗口查看函数定义 Ctrl -W } 窗口预览光标下符号定义
 " 在为当前目录生成tags文件后，可以通过按键 Ctrl + ] 跳转到对应的定义位置，再使用命令 Ctrl + o 回退到原来的位置。
@@ -50,7 +53,7 @@ let g:gutentags_ctags_extra_args += ['--c++-kinds=+pxI']
 let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
 
 
-set rtp+=/usr/local/lib/python3.6/dist-packages/powerline/bindings/vim/
+set rtp+=/usr/local/lib/python3.6/dist-packages/powerline/bindings/vim
 "powerline的安装路径，可能需要自行调整'
 set laststatus=2  
 "设置vim状态栏数量为2，用于显示powerline的内容'
@@ -60,10 +63,7 @@ set noshowmode
 "Hide the default mode text (e.g. -- INSERT -- below the statusline)'
 set t_Co=256
 
-"vim配色方案
-"colorscheme gruvbox
-"set background=dark
-"set t_Co=256
+"let g:ycm_global_ycm_extra_conf = '~/.vim/plugged/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py
 
 call plug#begin('~/.vim/plugged')
 "代码自动补全插件
@@ -80,4 +80,4 @@ call plug#end()
 
 colorscheme gruvbox
 set background=dark
-
+let g:ycm_global_ycm_extra_conf='~/.vim/plugged/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py'
