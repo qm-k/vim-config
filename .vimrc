@@ -1,3 +1,13 @@
+"缩进配置
+"'继承前一行的缩进方式，适用于多行注释'autoindent
+set autoindent smartindent shiftround
+"设置自动缩进长度为4空格'
+set shiftwidth=4
+"设置Tab长度为4空格'
+set tabstop=4
+set softtabstop=4                " insert mode tab and backspace use 4 spaces "
+set list
+
 "显示行号'
 set nu
 "set number
@@ -9,7 +19,7 @@ set cursorline
 
 "突出当前列
 "set cursorcolumn
-"set cuc          "cursorcolumn的缩写形式'
+"set cuc		"cursorcolumn的缩写形式'
 
 "显示空格tab缩进
 set listchars=tab:>-,trail:-
